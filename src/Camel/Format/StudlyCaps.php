@@ -26,7 +26,7 @@ class StudlyCaps implements FormatInterface
         // Match camelCase
         $pattern = '/   # Match position between camelCase "words".
             (?<=[a-z])  # Position is after a lowercase,
-            (?=[A-Z])   # and before an uppercase letter.
+            (?=[A-Z0-9])   # and before an uppercase letter.
             /x';
 
         $words = preg_split($pattern, $word);
